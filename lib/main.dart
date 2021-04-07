@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-      title: "Contador",
-      //exemplos do widget no flutter https://flutter.dev/docs/development/ui/widgets/layout
-      home: Home()));
+    title: "Contador",
+    //exemplos do widget no flutter https://flutter.dev/docs/development/ui/widgets/layout
+    home: Home(),
+    debugShowCheckedModeBanner: false,
+  ));
 }
 
 class Home extends StatefulWidget {
@@ -50,11 +52,8 @@ class _HomeState extends State<Home> {
                   Padding(
                     padding: EdgeInsets.all(10.0),
                     child: FlatButton(
-                      child: Text(
-                        "ADD+",
-                        style:
-                            TextStyle(fontSize: 30.0, color: Colors.blueAccent),
-                      ),
+                      child: Icon(Icons.plus_one),
+                      color: Colors.amber,
                       onPressed: () {
                         _changeUnit(1);
                       },
@@ -63,11 +62,8 @@ class _HomeState extends State<Home> {
                   Padding(
                     padding: EdgeInsets.all(10.0),
                     child: FlatButton(
-                      child: Text(
-                        "LEES-",
-                        style:
-                            TextStyle(fontSize: 30.0, color: Colors.blueAccent),
-                      ),
+                      child: Icon(Icons.exposure_minus_1),
+                      color: Colors.amber,
                       onPressed: () {
                         _changeUnit(-1);
                       },
